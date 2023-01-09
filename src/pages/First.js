@@ -3,7 +3,7 @@ import { SafeAreaView, Text, StyleSheet, Button } from 'react-native';
 
 const First = (props) => {
     const goToSecondPage = () => {
-        props.navigation.navigate('SecondPage');
+        props.navigation.navigate('SecondPage', { username: "berkayemreb" }); // sayfalar arası veri aktarımı olayı bu şekilde navigate'in 2. paramatresi olarak json objesi şeklinde olur.
     }
 
     return (
