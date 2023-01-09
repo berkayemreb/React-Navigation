@@ -1,10 +1,16 @@
 import React from 'react';
-import { SafeAreaView, Text, StyleSheet } from 'react-native';
+import { SafeAreaView, Text, StyleSheet, Button } from 'react-native';
 
-const First = () => {
+const First = (props) => {
+
+    const goToSecondPage = () => {
+        props.navigation.navigate('SecondPage');
+    }
+
     return (
         <SafeAreaView style={styles.container}>
             <Text style={styles.text}> Hello First Page!</Text>
+            <Button title='Go To Second Page!' onPress={goToSecondPage} />
         </SafeAreaView>
     )
 }
