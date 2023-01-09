@@ -1,10 +1,15 @@
 import React from 'react';
-import { SafeAreaView, Text, StyleSheet } from 'react-native';
+import { SafeAreaView, Text, StyleSheet, Button } from 'react-native';
 
-const Second = () => {
+const Second = (props) => {
+    console.log(props);
+    const goToBackPage = () => {
+        props.navigation.goBack();
+    }
     return (
         <SafeAreaView style={styles.container}>
             <Text style={styles.text}> Hello Second Page!</Text>
+            <Button title='Go Back!' onPress={goToBackPage} />
         </SafeAreaView>
     )
 }
